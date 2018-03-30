@@ -1,0 +1,3 @@
+e:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.csproj.CoreCompileInputs.cache
+e:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.AssemblyInfoInputs.cache
+e:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.AssemblyInfo.cs

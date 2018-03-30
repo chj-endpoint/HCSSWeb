@@ -1,0 +1,10 @@
+e:\Project\C#\HCSSWeb\HCSS.Service\obj\Debug\netstandard2.0\HCSS.Service.csproj.CoreCompileInputs.cache
+e:\Project\C#\HCSSWeb\HCSS.Service\obj\Debug\netstandard2.0\HCSS.Service.AssemblyInfoInputs.cache
+e:\Project\C#\HCSSWeb\HCSS.Service\obj\Debug\netstandard2.0\HCSS.Service.AssemblyInfo.cs
+e:\Project\C#\HCSSWeb\HCSS.Service\bin\Debug\netstandard2.0\HCSS.Service.deps.json
+e:\Project\C#\HCSSWeb\HCSS.Service\bin\Debug\netstandard2.0\HCSS.Service.dll
+e:\Project\C#\HCSSWeb\HCSS.Service\bin\Debug\netstandard2.0\HCSS.Service.pdb
+e:\Project\C#\HCSSWeb\HCSS.Service\bin\Debug\netstandard2.0\HCSS.Model.dll
+e:\Project\C#\HCSSWeb\HCSS.Service\bin\Debug\netstandard2.0\HCSS.Model.pdb
+e:\Project\C#\HCSSWeb\HCSS.Service\obj\Debug\netstandard2.0\HCSS.Service.dll
+e:\Project\C#\HCSSWeb\HCSS.Service\obj\Debug\netstandard2.0\HCSS.Service.pdb
