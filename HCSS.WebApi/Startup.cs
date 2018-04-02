@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using HCSS.Model;
 using HCSS.Service;
 using Microsoft.EntityFrameworkCore;
+using HCSS.Service.ElderInfoService;
 
 namespace HCSS.WebApi
 {
@@ -27,6 +28,8 @@ namespace HCSS.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<HDBContext>(options => options.UseMySql(Configuration.GetConnectionString("HDBConnection")));
+            services.AddUnitOfWork<HDBContext>();
+            services.AddScoped(typeof(IElderInfoService), typeof(ElderInfoService));
             services.AddMvc();
         }
 
