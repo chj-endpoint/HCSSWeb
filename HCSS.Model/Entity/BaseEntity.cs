@@ -16,7 +16,7 @@ namespace HCSS.Model.Entity
         /// 主键Id
         /// </summary>
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// 创建时间

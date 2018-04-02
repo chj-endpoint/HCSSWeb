@@ -21,7 +21,7 @@ namespace HCSS.Model.Entity
         /// <summary>
         /// 街道
         /// </summary>
-        [StringLength(100)]
+        [StringLength(50)]
         [Required]
         public string Street { get; set; }
 

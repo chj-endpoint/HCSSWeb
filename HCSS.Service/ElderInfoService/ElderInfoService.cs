@@ -17,7 +17,5 @@ namespace HCSS.Service.ElderInfoService
 
             return elderInfo;
         }
-
-
     }
 }

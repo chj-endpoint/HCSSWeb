@@ -1,29 +1,42 @@
 
+using HCSS.Model.Entity;
 using HCSS.Service.ElderInfoService;
 using Microsoft.AspNetCore.Mvc;
-
+using Newtonsoft.Json;
 
 namespace HCSS.WebApi.Controllers
 {
     [Route("api/[controller]")]
     public class ElderInfoController
     {
-        private ElderInfoService mElderInfoService;
-        public ElderInfoController(ElderInfoService elderInfoService)
+        private IElderInfoService mElderInfoService;
+        public ElderInfoController(IElderInfoService elderInfoService)
         {
             mElderInfoService = elderInfoService;
         }
 
         // GET api/ElderInfo/5
-        [HttpGet("{id}")]
-        public string QueryById(int id)
+        [HttpGet]
+        public string Get(int id)
         {
-            return "value";
+            ElderInfo elderInfo = new ElderInfo();
+            elderInfo = mElderInfoService.GetElderInfoById(id);
+            string result = JsonConvert.SerializeObject(elderInfo);
+            return result;
+        }
+
+        [HttpGet]
+        public string GetById(int id)
+        {
+            ElderInfo elderInfo = new ElderInfo();
+            elderInfo = mElderInfoService.GetElderInfoById(id);
+            string result = JsonConvert.SerializeObject(elderInfo);
+            return result;
         }
 
         // GET api/ElderInfo/5
-        [HttpGet("{street, community, village, name}")]
-        public string Query(string street, string community, string village, string name)
+        [HttpGet]
+        public string GetByName(string street, string community, string village, string name)
         {
             if (string.IsNullOrEmpty(name))
             {
