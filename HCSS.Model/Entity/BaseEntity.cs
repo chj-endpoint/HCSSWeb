@@ -21,7 +21,6 @@ namespace HCSS.Model.Entity
         /// <summary>
         /// 创建时间
         /// </summary>
-        [Key]
         public DateTime CreateTime { get; set; }
 
         /// <summary>
