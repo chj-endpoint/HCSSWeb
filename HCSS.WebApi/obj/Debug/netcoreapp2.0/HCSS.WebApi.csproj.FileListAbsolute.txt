@@ -1,3 +1,14 @@
 e:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.csproj.CoreCompileInputs.cache
 e:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.AssemblyInfoInputs.cache
 e:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.AssemblyInfo.cs
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.WebApi.deps.json
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.WebApi.runtimeconfig.json
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.WebApi.runtimeconfig.dev.json
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.WebApi.dll
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.WebApi.pdb
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.Model.dll
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.Service.dll
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.Model.pdb
+E:\Project\C#\HCSSWeb\HCSS.WebApi\bin\Debug\netcoreapp2.0\HCSS.Service.pdb
+E:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.dll
+E:\Project\C#\HCSSWeb\HCSS.WebApi\obj\Debug\netcoreapp2.0\HCSS.WebApi.pdb
