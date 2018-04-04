@@ -12,10 +12,11 @@ namespace HCSS.Service.ElderInfoService
             mUnitWork = iUnitWork;
         }
 
+        //分页查询老人信息
         public IPagedList<ElderInfo> GetElderInfoByCondition(int pageIndex, int pageSize, string street, string community, string village, string name)
         {
             var repoElder = mUnitWork.GetRepository<ElderInfo>();    
-            
+            //查询预测
             Predicate<ElderInfo> predicate = delegate(ElderInfo elderInfo){
                 bool condition = true;
                 if(condition && !string.IsNullOrEmpty(street)){
@@ -38,11 +39,7 @@ namespace HCSS.Service.ElderInfoService
             return pagedList;
         }
 
-        private bool FindPredicate(ElderInfo obj)
-        {
-            throw new NotImplementedException();
-        }
-
+        //根据id查询老人信息
         public ElderInfo GetElderInfoById(int id){
             var repoElder = mUnitWork.GetRepository<ElderInfo>();            
             ElderInfo elderInfo = repoElder.Find(id);
