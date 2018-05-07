@@ -20,16 +20,16 @@ namespace HCSS.Service.ElderInfoService
             Predicate<ElderInfo> predicate = delegate(ElderInfo elderInfo){
                 bool condition = true;
                 if(condition && !string.IsNullOrEmpty(street)){
-                    condition = string.Equals(elderInfo.Street, street);
+                    condition = string.Equals(elderInfo.street, street);
                 }
                 if(condition && !string.IsNullOrEmpty(community)){
-                    condition = string.Equals(elderInfo.Community, community);
+                    condition = string.Equals(elderInfo.community, community);
                 }
                 if(condition && !string.IsNullOrEmpty(village)){
-                    condition = string.Equals(elderInfo.Village, village);
+                    condition = string.Equals(elderInfo.village, village);
                 }
                 if(condition && !string.IsNullOrEmpty(name)){
-                    condition = elderInfo.Name.Contains(name);
+                    condition = elderInfo.name.Contains(name);
                 }
                 return condition;
             };

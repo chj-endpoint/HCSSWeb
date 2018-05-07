@@ -34,8 +34,8 @@ namespace HCSS.WebApi.Controllers
         [HttpPost]
         public string Insert([FromBody] User user)
         {                       
-            user.CreateTime = System.DateTime.Now;
-            user.UpdateTime = System.DateTime.Now;
+            user.createTime = System.DateTime.Now;
+            user.updateTime = System.DateTime.Now;
             if(user.Role <= 0){
                 user.Role = 1;
             }
@@ -47,7 +47,7 @@ namespace HCSS.WebApi.Controllers
         [HttpPost]
         public string Update([FromBody] User user)
         {           
-            user.UpdateTime = System.DateTime.Now;
+            user.updateTime = System.DateTime.Now;
             bool updateResult = mUserService.UpdateUser(user);
             var result = new { isOk = updateResult, message = string.Empty };            
             return JsonConvert.SerializeObject(result);

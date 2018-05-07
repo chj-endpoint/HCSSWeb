@@ -16,32 +16,32 @@ namespace HCSS.Model.Entity
         /// </summary>
         [StringLength(20)]
         [Required]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         /// <summary>
         /// 街道
         /// </summary>
         [StringLength(50)]
         [Required]
-        public string Street { get; set; }
+        public string street { get; set; }
 
         /// <summary>
         /// 社区
         /// </summary>
         [StringLength(50)]
         [Required]
-        public string Community { get; set; }
+        public string community { get; set; }
 
         /// <summary>
         /// 小区
         /// </summary>
         [StringLength(50)]
         [Required]
-        public string Village { get; set; }
+        public string village { get; set; }
 
         /// <summary>
         /// 其他信息
         /// </summary>
-        public string ExtInfo { get; set; }
+        public string extInfo { get; set; }
     }
 }

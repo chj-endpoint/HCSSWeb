@@ -4,6 +4,7 @@ using HCSS.Model.Entity;
 using HCSS.Service.ElderInfoService;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace HCSS.WebApi.Controllers
 {
@@ -11,6 +12,7 @@ namespace HCSS.WebApi.Controllers
     public class ElderInfoController
     {
         private IElderInfoService mElderInfoService;
+        IsoDateTimeConverter timeConverter = new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss" };
         public ElderInfoController(IElderInfoService elderInfoService)
         {
             mElderInfoService = elderInfoService;
@@ -22,7 +24,7 @@ namespace HCSS.WebApi.Controllers
         {
             ElderInfo elderInfo = new ElderInfo();
             elderInfo = mElderInfoService.GetElderInfoById(id);
-            string result = JsonConvert.SerializeObject(elderInfo);
+            string result = JsonConvert.SerializeObject(elderInfo, Formatting.Indented, timeConverter);
             return result;
         }
 
@@ -31,7 +33,7 @@ namespace HCSS.WebApi.Controllers
         {
             ElderInfo elderInfo = new ElderInfo();
             elderInfo = mElderInfoService.GetElderInfoById(id);
-            string result = JsonConvert.SerializeObject(elderInfo);
+            string result = JsonConvert.SerializeObject(elderInfo, Formatting.Indented, timeConverter);
             return result;
         }
 
@@ -40,7 +42,7 @@ namespace HCSS.WebApi.Controllers
         {           
             var pagedList = mElderInfoService.GetElderInfoByCondition(pageIndex, pageSize, street, community, village, name);
             List<ElderInfo> elderList = (List<ElderInfo>)pagedList.Items;
-            string result = JsonConvert.SerializeObject(elderList);
+            string result = JsonConvert.SerializeObject(elderList, Formatting.Indented, timeConverter);
             return result;
         }
     }

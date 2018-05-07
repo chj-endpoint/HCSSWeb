@@ -51,7 +51,7 @@ namespace HCSS.Service.UserService
             if(user.Role > 0){
                 userDb.Role = user.Role;
             }
-            userDb.UpdateTime = System.DateTime.Now;
+            userDb.updateTime = System.DateTime.Now;
             repoUser.Update(userDb);
             int rows = mUnitWork.SaveChanges();
             return rows > 0;
