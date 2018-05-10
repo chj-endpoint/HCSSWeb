@@ -46,5 +46,38 @@ namespace HCSS.Service.ElderInfoService
 
             return elderInfo;
         }
+
+
+        public bool Insert(ElderInfo elderInfo)
+        {
+            var repoElderInfo = mUnitWork.GetRepository<ElderInfo>();
+            repoElderInfo.Insert(elderInfo);
+            int rows = mUnitWork.SaveChanges();
+            return rows > 0;
+        }
+
+        public bool Update(ElderInfo elderInfo)
+        {
+            var repoElderInfo = mUnitWork.GetRepository<ElderInfo>();
+            ElderInfo elderInfoDb = repoElderInfo.GetFirstOrDefault(predicate : e => e.id == elderInfo.id);
+            if (elderInfoDb == null) return false;
+            if(!string.IsNullOrEmpty(elderInfo.community)){
+                elderInfoDb.community = elderInfo.community;
+            }
+            if(!string.IsNullOrEmpty(elderInfo.name)){
+                elderInfoDb.name = elderInfo.name;
+            }
+            if(!string.IsNullOrEmpty(elderInfo.street)){
+                elderInfoDb.street = elderInfo.street;
+            }
+            if(!string.IsNullOrEmpty(elderInfo.village)){
+                elderInfoDb.village = elderInfo.village;
+            }
+            elderInfoDb.extInfo = elderInfo.extInfo;
+            elderInfoDb.updateTime = System.DateTime.Now;
+            repoElderInfo.Update(elderInfoDb);
+            int rows = mUnitWork.SaveChanges();
+            return rows > 0;
+        }
     }
 }

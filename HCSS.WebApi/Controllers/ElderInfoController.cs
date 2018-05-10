@@ -45,5 +45,24 @@ namespace HCSS.WebApi.Controllers
             string result = JsonConvert.SerializeObject(elderList, Formatting.Indented, timeConverter);
             return result;
         }
+
+        [HttpPost]
+        public string UpdateElder([FromBody] ElderInfo elderInfo)
+        {           
+            elderInfo.updateTime = System.DateTime.Now;
+            bool updateResult = mElderInfoService.Update(elderInfo);
+            var result = new { isOk = updateResult, message = string.Empty };            
+            return JsonConvert.SerializeObject(result);
+        }
+
+         [HttpPost]
+        public string InsertElder([FromBody] ElderInfo elderInfo)
+        {           
+            elderInfo.createTime = System.DateTime.Now;
+            elderInfo.updateTime = System.DateTime.Now;
+            bool insertResult = mElderInfoService.Insert(elderInfo);
+            var result = new { isOk = insertResult, message = string.Empty };            
+            return JsonConvert.SerializeObject(result);
+        }
     }
 }

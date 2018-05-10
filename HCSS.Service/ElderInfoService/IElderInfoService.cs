@@ -11,5 +11,7 @@ namespace HCSS.Service.ElderInfoService
 
         //查询条件
         IPagedList<ElderInfo> GetElderInfoByCondition(int pageIndex, int pageSize, string street, string community, string village, string name);
+        bool Update(ElderInfo elderInfo);
+        bool Insert(ElderInfo elderInfo);
     }
 }
